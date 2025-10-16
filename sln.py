@@ -16,4 +16,4 @@ main = lambda c: map(lambda y: list(map(lambda m: list(main(m)), ["".join(list(m
 list(main(mult))
 print("Final result:\n", g)
 
-#almost working, can exec needs to be a integer to count nested exec restrictions
+#Maybe add some file reading 
