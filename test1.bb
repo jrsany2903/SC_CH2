@@ -1,0 +1,12 @@
+clear x; 
+clear y; 
+incr x; 
+incr x; 
+incr x; 
+decr x; 
+incr y; 
+incr y; 
+incr y; 
+incr y; 
+incr y; 
+clear z;
