@@ -1,6 +1,6 @@
 g = {"__CANEXEC__": 0}
 stack = []
-f = {"clear":lambda x,i: ((g.__setitem__(x, 0) if g["__CANEXEC__"] == len(stack) else None, (0,0))[1]),
+f = {"clear":lambda x,i: ((g.__setitem__(x, 0) if g["__CANEXEC__"] == len(stack) else None, (0,0)))[1],
      "incr":lambda x,i: ((g.__setitem__(x, g.get(x) + 1)) if g["__CANEXEC__"] == len(stack) else None, (0,0))[1],   
      "decr":lambda x,i: ((g.__setitem__(x, g.get(x) - 1)) if g["__CANEXEC__"] == len(stack) else None, (0,0))[1],
      "while":lambda x,i: ((stack.insert(0, (x,i)) if g.get(x) != 0 and g["__CANEXEC__"] == len(stack) else None), (0,0), g.__setitem__("__CANEXEC__", g["__CANEXEC__"] + 1))[1],
@@ -10,6 +10,27 @@ main = lambda c: map(lambda y: list(map(lambda m: list(main(m)), ["".join(list(m
 
 
 
+
+'''
+TODO
+
+Solve end 0; issue with mod
+
+implement comment ignore
+conditional loop
+if statement (1-loop)
+ADD X Y
+SUB X Y
+MULT X Y
+MOD X Y
+DIV X Y
+
+DEFFN name
+
+ENDFN
+
+
+'''
 
 
 #Source bb code from file
