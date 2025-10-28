@@ -13,7 +13,6 @@ f = {"clear":lambda x: ((g.__setitem__(x[1][1], 0) if g["__CANEXEC__"] == len(st
      "endfn": lambda x: ((stack[0][1] + 1,x[0], stack.pop(0)[0]), g.__setitem__("__CANEXEC__", g["__CANEXEC__"] - 2))[0],
      "copy": lambda x: ((0,0,"__run__"),g.__setitem__(x[1][1], g[x[1][2]]) if g["__CANEXEC__"] == len(stack) else None)[0],
      "del": lambda x: ((0,0,"__run__"),g.pop(x[1][1]) if g["__CANEXEC__"] == len(stack) else None)[0]}
-#fn unfinished prevent execution in def
 main = lambda c: map(lambda y: list(map(lambda m: list(main(m)) if y[2] == "__run__" else f.__setitem__(y[2], lambda t: ((0,0,"__run__"),list(main(m)))[0]), ["".join(list(map(lambda x: (" ".join(x) + ";") ,list(filter(lambda x: x != [''] ,map(lambda x: x.split(" "),map(lambda x: x.strip(), c.split(";")))) ) [y[0]:y[1]])))]  )), map(lambda x: (print(g, stack, x),f[x[1][0]](x))[1], enumerate(filter(lambda x: x != [''] ,  map(lambda x: x.split(" "), map(lambda x: x.strip(), c.split(";")))  ))))
 #----------------------------------------------------------
 
